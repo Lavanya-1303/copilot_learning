@@ -5,6 +5,8 @@ def calculate(first_number, operator, second_number):
         return first_number - second_number
     if operator == "*":
         return first_number * second_number
+    if operator == "**":
+        return first_number ** second_number
     if operator == "%":
         return first_number % second_number
     if operator == "/":
@@ -17,7 +19,7 @@ def calculate(first_number, operator, second_number):
 def main():
     try:
         first_number = float(input("Enter the first number: "))
-        operator = input("Choose an operation (+, -, *, /, %): ").strip()
+        operator = input("Choose an operation (+, -, *, /, %, **): ").strip()
         second_number = float(input("Enter the second number: "))
         result = calculate(first_number, operator, second_number)
         print(f"Result: {result}")
